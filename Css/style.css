@@ -322,7 +322,7 @@ figure div {
     text-align: center;
 }
 .transit:hover {
-    transform: scale(1.09);
+    transform: scale(1.03);
 }
 figcaption {
     padding-top: .5rem;
