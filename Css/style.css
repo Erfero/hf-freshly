@@ -1,0 +1,486 @@
+/* La page HOME */
+/* ************************************************************* */
+
+
+/* Les modification au nivau de body */
+/* *************************************************************** */
+@import url("./font-face.css");
+@import url("./media-query.css");
+:root {
+    --clr-beige: #ebe3db;
+    --clr-marron: #4c4343;
+    --clr-red: #950000;
+    --clr-bg-image: #fff;
+    --clr-white: white;
+    --clr-hover:  rgba(76,67,67,.9);
+    --clr-black: black;
+    --clr-color: rgb(113, 124, 113);
+    --clr-box: rgba(76,67,67,.5);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Athiti";
+    font-weight: 500;
+    font-size: 1rem;
+}
+.container {
+    max-width: 87.5rem;
+    margin-inline: auto;
+}
+main.container {
+    width: 95%;
+}
+img {
+    width: 100%;
+}
+
+
+
+/* Les modification au niveau du header */
+/* *************************************************************** */
+
+header {
+    background-image: linear-gradient(to bottom, var(--clr-beige) ,var(--clr-bg-image), var(--clr-white));
+}
+.logo img {
+    width: 10rem;
+    margin-block: 1rem;
+}
+.flex {
+    font-weight: 600;
+}
+.flex a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.flex a span {
+    font-size: 1.2rem;
+    color: var(--clr-black);
+}
+nav {
+    margin-block: 2rem;
+}
+nav ul {
+    padding-left: 0;
+    border-top: 1px solid;
+}
+nav ul li {
+    list-style-type: none;
+    border-bottom: 1px solid;
+    background-color: var(--clr-beige);
+}
+nav ul li a {
+   text-decoration: none;
+   padding-block: .75rem;
+   color: var(--clr-black);
+}
+header nav ul li a:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-red);
+}
+.active {
+    color: var(--clr-white);
+    background-color: var(--clr-marron);
+}
+
+
+
+/* L'ajout du font awesome 5 free (\f005) */
+/* **************************************************************** */
+
+h1::before,
+h1::after,
+h2::before,
+h2::after,
+main h3::before,
+main h3::after,
+.flex a span::before,
+.flex a span::after,
+article ul li::before {
+    font-family: "Font Awesome 5 free";
+    content: "\f005";
+    font-weight: 900;
+    font-size: 0.6rem;
+    padding: 0.3rem;
+}
+h1,
+h2,
+main h3,
+.flex a span,
+.flex a span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Les modification au niveau du slider et jQuery */
+/* ********************************************************** */
+
+.carousel {
+    position: relative;
+    margin-block: 0; 
+}
+.slick-prev {
+    left: 1rem;
+    z-index: 1;
+}
+.slick-next {
+    right: 2.2rem;
+    z-index: 1;
+}
+.slick-dots li button:before {
+    font-size: .7rem;
+}
+
+
+
+/* Les modifications au niveau du main */
+/* ****************************************************************************** */
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-family: "Merienda";
+}
+h1 {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+}
+h2 {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+}
+h3 {
+    font-size: 1rem;
+}
+.grid-menu article {
+    background-color: var(--clr-beige);
+    padding-bottom: 2rem;
+    padding-top: .5rem;
+    margin-block: 1.5rem;
+}
+.slick {
+    position: relative;
+    width: 100%;    
+}
+.slider {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--clr-hover);
+    opacity: 0;
+    color: var(--clr-white);
+    transition: all .9s;
+    cursor: pointer;
+}
+.slider:hover {
+    opacity: 1;
+}
+.border {
+    border: solid 4px var(--clr-white);
+    margin: 0rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    font-style: italic;
+}
+.slick img {
+    display: block;
+}
+.slider p:first-child {
+    font-size: 3rem;
+    padding: 0;
+    margin: 0;
+}
+article a:last-of-type img {
+    width: 1.5rem;
+    padding-right: .1rem;
+}
+article a:last-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-marron);
+    text-decoration: none;
+    padding-block: .5rem;
+    margin-inline: 2rem;
+    color: var(--clr-white);
+    text-align: center;
+}
+article a:last-of-type:hover {
+    transform: scale(.98);
+    color: var(--clr-white);
+    background-color: var(--clr-red);
+}
+article ul li {
+    list-style-type: none;
+    border-bottom: 1px dashed;
+    padding-block: .5rem;
+    padding-inline: 2rem;
+}
+article ul {
+    padding: 0;
+}
+
+
+
+
+/* Les modification au niveau du footer */
+/* ******************************************************************************* */
+
+footer {
+    color: var(--clr-white);
+    text-align: center;
+}
+footer p {
+    font-size: 1rem;
+}
+footer section p {
+    margin-block: 0;
+}
+.infos {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+.infos section h3 {
+    font-size: 1rem;
+    padding-block: .6rem;
+    border-bottom: 1px dashed var(--clr-white);
+    margin-inline: 1rem;
+}
+.fond {
+    background-image: url("../ressources/images/footer-bg.jpg");
+}
+.deco a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.facebook,
+.instagram,
+.pinterest {
+    color: var(--clr-white);
+    padding-inline: .2rem;
+}
+.facebook:hover,
+.instagram:hover,
+.pinterest:hover {
+    color: var(--clr-color);
+}
+.Academy {
+    padding-block: 1rem;
+    background-color: var(--clr-marron);
+}
+.Academy img {
+    width: 4.5rem;
+}
+.Academy a {
+    color: var(--clr-white);
+}
+
+
+
+/* La page ABOUT */
+/* ************************************************************ */
+
+
+
+/* Les modification au niveau du main */
+/* ************************************************************* */
+
+.about video {
+    display: block;
+    margin-block: 3rem;
+    text-align: center;
+    width: 80%;
+    margin-inline: auto;
+}
+figure {
+    background-color: var(--clr-beige);
+    padding: 1.5rem 1rem;
+    margin-inline: 0;
+    margin-bottom: 1.5rem;
+
+}
+figure div {
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+.transit:hover {
+    transform: scale(1.09);
+}
+figcaption {
+    padding-top: .5rem;
+}
+
+
+
+/* La page MENUS */
+/* ************************************************************ */
+
+
+
+/* Les modification au niveau du main */
+/* ************************************************************* */
+
+.svg {
+    width: 1.5rem;
+    margin-block: 0;
+    padding-block: 0;
+}
+.mixitup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;   
+}
+.grid-desert,
+.grid-drink, 
+.mixitup div:nth-of-type(9) {
+    grid-column: 1/-1;
+    width: 50%;
+    justify-self: center;
+}
+.welcome .mixitup {
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    margin-block: 1rem;
+
+}
+.welcome p,
+.desert p,
+.cocktail p {
+    text-align: center;
+}
+.size {
+    font-size: 1rem;
+    font-family: "Merienda";
+}
+.scale {
+    transform: scale(1.05);
+}
+.welcome .button {
+    text-align: center;
+}
+.welcome .mixitup {
+    background-color: var(--clr-beige);
+}
+.button button {
+    margin-inline: .5rem;
+    padding-inline: .75rem;
+    padding-block: .3rem;
+    font-weight: 600;
+    border: none;
+    transition: all .8s;
+}
+.button button:hover {
+    color: var(--clr-white);
+    background-color: var(--clr-red);
+}
+
+.private .parent-grid img {
+    box-shadow: 0 .3rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.4rem 1.3rem 0 rgba(0, 0, 0, 0.19);
+}
+.mixitup img {
+    box-shadow: 0 0.2rem 0.2rem 0 var(--clr-box), 0 0.2rem 0.2rem 0 var(--clr-box);
+}
+
+
+/* La page Contact */
+/* ************************************************************ */
+
+
+
+/* Les modification au niveau du main */
+/* ************************************************************* */
+
+.contact {
+    text-align: center;
+}
+.contact p {
+    text-align: center;
+}
+.contact-star {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--clr-rouge);
+    text-decoration: solid dotted var(--clr-rouge);
+}
+.contact .form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    margin-inline: auto;
+}
+.contact .form {
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-beige);
+}
+.contact form fieldset:nth-child(1),
+.contact form fieldset:nth-child(2) {
+    align-items: center;
+    /* flex-basis: 10%; */
+    border: none;
+    padding: 0;
+    margin: 0;
+    margin-block: 2rem;
+}
+.contact form fieldset:nth-child(3) {
+    flex-basis: 100%;
+    border: none;
+}
+.contact form fieldset legend {
+    font-family: Merienda;
+    font-size: 2rem;
+    text-align: left;
+}
+.contact form fieldset div {
+    width: 90%;
+    text-align: left;
+}
+.contact form fieldset div input {
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: solid 1px var(--clr-marron);
+}
+input[type="submit"] {
+    flex-basis: 20%;
+    transition: all 0.8s;
+    padding: 0.3rem;
+    font-weight: 700;
+    color: var(--clr-white);
+    border: solid 1px var(--clr-marron);
+    background-color: var(--clr-marron);
+}
+textarea {
+    margin-block: 2rem;
+    width: 90%;
+    padding: 1rem;
+}
+input[type="submit"]:hover {
+    color: var(--clr-marron);
+    background-color: var(--clr-white);
+}
+.contact form .form fieldset:nth-child(1),
+.contact form .form fieldset:nth-child(2) {
+    flex-basis: 100%;
+}
+
+
