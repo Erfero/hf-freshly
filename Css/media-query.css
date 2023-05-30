@@ -90,8 +90,8 @@ Desktop
     .fond .container,
     .Academy .container
     {
-        max-width: 87.5rem;
         width: 80%;
+        max-width: 87.5rem;
         margin-inline: auto;
     }
     .flex {
@@ -126,8 +126,8 @@ Desktop
         grid-template-columns: repeat(3, 1fr);
     }
     .float {
-        float: right;
         width: 25rem;
+        float: right;
         margin-left: .5rem;
     }
     section:first-of-type {
@@ -147,9 +147,9 @@ Desktop
         column-gap: 2rem;
     }
     .wrapper {
+        width: 80%;
         max-width: 87.5rem;
         margin-inline: auto;
-        width: 80%;
     }
     .about video {
         width: 70%;
